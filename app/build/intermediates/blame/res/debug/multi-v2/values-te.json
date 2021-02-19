@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Work\\AndroidSQLite-master\\AndroidSQLite-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-te\\values-te.xml",
+            "outputFile": "E:\\Work\\New folder\\Test\\AndroidSQLite\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-te\\values-te.xml",
             "map": [
                 {
                     "source": "E:\\Progi\\AndroidStudio\\gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\024d333e323d9c4c7ed9dab2c71e111d\\res\\values-te\\values-te.xml",
