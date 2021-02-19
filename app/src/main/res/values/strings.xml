@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Workers Database</string>
+    <string name="action_settings">Settings</string>
+    <string name="activity_title_home">Workers</string>
+    <string name="msg_no_workers">No workers found!</string>
+    <string name="lbl_new_worker_title">Name</string>
+    <string name="lbl_edit_worker_title">Name</string>
+    <string name="hint_enter_worker">Enter your worker!</string>
+    <string name="dialog_name">Name</string>
+    <string name="dialog_worker_id">ID</string>
+    <string name="dialog_worker_surname">Surname</string>
+    <string name="dialog_department">Department</string>
+    <string name="dialog_date_of_birth">Date of birth</string>
+    <string name="dialog_date_of_accept">Date of accept</string>
+    <string name="button_sort_by_workers_id">Sort by workers id</string>
+</resources>

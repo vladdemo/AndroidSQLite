@@ -1,0 +1,125 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:2:1-24:12
+MERGED from [com.android.support:design:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\d20f1cae72c7862ad10571c1f3020640\AndroidManifest.xml:17:1-22:12
+MERGED from [ru.egslava:MaskedEditText:1.0.5] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\MaskedEditText-1.0.5.aar\425a2fbfa04b4a2dd51ba64b18fc555e\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\e85d0cea895e18623a665cd6aea9cf1c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\905ff34a75584dfe895b156f6ce158f4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\b220438d3c1303be2eb15cb17595bed8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\f79ba3f449fb085addeb9fdf9c1f787b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\20b2ee78ab35b97409a20eb57fa6244a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\bb75246cf51d92e4a5305f3f601c2be9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\16ac889e0f8f6d9887762661faa299ad\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\8e567884f6a1513ff2420b71543e885e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\f5c7e97e74a817c3bc0acbff14b15db6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\e33f2c0d853cf09216e930c030e94453\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\f607a370855325e4aeecd43036b77e1f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\024d333e323d9c4c7ed9dab2c71e111d\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d4a6c7d8acfe65e7dca6acd4d86f332e\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\3d03e72dc4f10c3cfab134e6a47eb7ec\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\887f368332d48944b324099f6537223a\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\3918a63296022fc728044d9d9c2554d4\AndroidManifest.xml:17:1-22:12
+INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:2:1-24:12
+	package
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:3:5-38
+		INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:2:1-24:12
+		INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:2:1-24:12
+		INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:5:5-22:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\905ff34a75584dfe895b156f6ce158f4\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\905ff34a75584dfe895b156f6ce158f4\AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:11:9-40
+activity#info.androidhive.sqlite.view.MainActivity
+ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:12:9-21:20
+	android:label
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:14:13-45
+	android:theme
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:15:13-56
+	android:name
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:13:13-46
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml:19:27-74
+uses-sdk
+INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\d20f1cae72c7862ad10571c1f3020640\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\d20f1cae72c7862ad10571c1f3020640\AndroidManifest.xml:20:5-44
+MERGED from [ru.egslava:MaskedEditText:1.0.5] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\MaskedEditText-1.0.5.aar\425a2fbfa04b4a2dd51ba64b18fc555e\AndroidManifest.xml:7:5-9:41
+MERGED from [ru.egslava:MaskedEditText:1.0.5] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\MaskedEditText-1.0.5.aar\425a2fbfa04b4a2dd51ba64b18fc555e\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\e85d0cea895e18623a665cd6aea9cf1c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\e85d0cea895e18623a665cd6aea9cf1c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\905ff34a75584dfe895b156f6ce158f4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\905ff34a75584dfe895b156f6ce158f4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\b220438d3c1303be2eb15cb17595bed8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\b220438d3c1303be2eb15cb17595bed8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\f79ba3f449fb085addeb9fdf9c1f787b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\f79ba3f449fb085addeb9fdf9c1f787b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\20b2ee78ab35b97409a20eb57fa6244a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\20b2ee78ab35b97409a20eb57fa6244a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\bb75246cf51d92e4a5305f3f601c2be9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\bb75246cf51d92e4a5305f3f601c2be9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\16ac889e0f8f6d9887762661faa299ad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\16ac889e0f8f6d9887762661faa299ad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\8e567884f6a1513ff2420b71543e885e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\8e567884f6a1513ff2420b71543e885e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\f5c7e97e74a817c3bc0acbff14b15db6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\f5c7e97e74a817c3bc0acbff14b15db6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\e33f2c0d853cf09216e930c030e94453\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\e33f2c0d853cf09216e930c030e94453\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\f607a370855325e4aeecd43036b77e1f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\f607a370855325e4aeecd43036b77e1f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\024d333e323d9c4c7ed9dab2c71e111d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\024d333e323d9c4c7ed9dab2c71e111d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d4a6c7d8acfe65e7dca6acd4d86f332e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d4a6c7d8acfe65e7dca6acd4d86f332e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\3d03e72dc4f10c3cfab134e6a47eb7ec\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\3d03e72dc4f10c3cfab134e6a47eb7ec\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\887f368332d48944b324099f6537223a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\887f368332d48944b324099f6537223a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\3918a63296022fc728044d9d9c2554d4\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] E:\Progi\AndroidStudio\gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\3918a63296022fc728044d9d9c2554d4\AndroidManifest.xml:20:5-44
+INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+		ADDED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Work\AndroidSQLite-master\AndroidSQLite-master\app\src\main\AndroidManifest.xml
