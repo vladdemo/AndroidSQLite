@@ -55,7 +55,7 @@ public class WorkersAdapter extends RecyclerView.Adapter<WorkersAdapter.MyViewHo
         holder.name.setText(worker.getWorkersId()+ "  "+
                 worker.getName()+"  "+
                 worker.getSurname()+"  "+
-                worker.getDepartment()+"  "+
+                worker.getDepartment_name()+"  "+
                 worker.getDateOfBirth()+"  "+
                 worker.getDateOfAccept());
 

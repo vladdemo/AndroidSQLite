@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private TextView noWorkersView;
     private Button sortById;
-    private int direction=1;
+    private int direction = 1;
     private DatabaseHelper db;
 
     @Override
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         sortById.findViewById(R.id.sortById).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            direction*=-1;
+            direction *= -1;
                 workersList.clear();
                 workersList.addAll(db.sortWorkersById(direction));
                 mAdapter.notifyDataSetChanged();
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         n.setWorkersId(workersId);
         n.setName(name);
         n.setSurname(surname);
-        n.setDepartment(department);
+        n.setDepartment_name(department);
         n.setDateOfBirth(dateOfBirth);
         n.setDateOfAccept(dateOfAccept);
 
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
      * Delete - 0
      */
     private void showActionsDialog(final int position) {
-        CharSequence colors[] = new CharSequence[]{"Edit", "Delete"};
+        CharSequence[] colors = new CharSequence[]{"Edit", "Delete"};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Choose option");
@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
             inputName.setText(worker.getName());
             inputWorkersID.setText(String.valueOf(worker.getWorkersId()));
             inputSurname.setText(worker.getSurname());
-            inputDepartment.setText(worker.getDepartment());
+            inputDepartment.setText(worker.getDepartment_name());
             inputDateOfBirth.setText(worker.getDateOfBirth());
             inputDateOfAccept.setText(worker.getDateOfAccept());
         }

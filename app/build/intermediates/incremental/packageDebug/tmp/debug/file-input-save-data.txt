@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Fri Feb 19 18:20:26 EET 2021
-0.baseType=DIRECTORY
-0.base=E\:\\Work\\New folder\\Test\\AndroidSQLite\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-0.path=classes.dex
-0.set=DEX
-count=1

@@ -15,7 +15,7 @@ import info.androidhive.sqlite.database.model.Worker;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Database Version
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
 
     // Database Name
     private static final String DATABASE_NAME = "workers_db";
@@ -29,8 +29,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        // create notes table
+        // create two tables
+        db.execSQL(Worker.CREATE_TABLE_2);
         db.execSQL(Worker.CREATE_TABLE);
+
     }
 
     // Upgrading database
@@ -38,6 +40,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Drop older table if existed
         db.execSQL("DROP TABLE IF EXISTS " + Worker.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + Worker.TABLE_NAME_2);
 
         // Create tables again
         onCreate(db);
@@ -49,19 +52,48 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // get writable database as we want to write data
         SQLiteDatabase db = this.getWritableDatabase();
 
+        // get list of all department's names
+        List<String> departments = new ArrayList<>();
+        Cursor cursor_check = db.rawQuery("SELECT " + Worker.COLUMN_DEPARTMENT_NAME +
+                " FROM " + Worker.TABLE_NAME_2, null);
+        if (cursor_check.moveToFirst()) {
+            do {
+                departments.add(cursor_check.getString(cursor_check.getColumnIndex(Worker.COLUMN_DEPARTMENT_NAME)));
+            } while (cursor_check.moveToNext());
+        }
+
+        // insert data into department table if it didn't exist already
+        if (!departments.contains(department)) {
+            ContentValues values2 = new ContentValues();
+            values2.put(Worker.COLUMN_DEPARTMENT_NAME, department);
+            long id2 = db.insert(Worker.TABLE_NAME_2, null, values2);
+        }
+
+        // get idDepartment
+        Cursor cursor = db.query(Worker.TABLE_NAME_2,
+                new String[]{Worker.COLUMN_ID_DEPARTMENT, Worker.COLUMN_DEPARTMENT_NAME},
+                Worker.COLUMN_DEPARTMENT_NAME + "=?",
+                new String[]{String.valueOf(department)}, null, null, null, null);
+        cursor.moveToFirst();
+        int id_department= cursor.getInt(cursor.getColumnIndex(Worker.COLUMN_ID_DEPARTMENT));
+
+
+
         ContentValues values = new ContentValues();
-        // `id` and `timestamp` will be inserted automatically.
+        // `id` will be inserted automatically.
         // no need to add them
         values.put(Worker.COLUMN_WORKERS_ID, workersId);
         values.put(Worker.COLUMN_NAME, name);
         values.put(Worker.COLUMN_SURNAME, surname);
-        values.put(Worker.COLUMN_DEPARTMENT, department);
+        values.put(Worker.COLUMN_ID_DEPARTMENT, id_department);
         values.put(Worker.COLUMN_DATEOFBIRTH, dateOfBirth);
         values.put(Worker.COLUMN_DATEOFACCEPT, dateOfAccept);
 
 
         // insert row
         long id = db.insert(Worker.TABLE_NAME, null, values);
+
+
 
         // close db connection
         db.close();
@@ -77,7 +109,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(Worker.TABLE_NAME,
                 new String[]{Worker.COLUMN_ID, Worker.COLUMN_WORKERS_ID, Worker.COLUMN_NAME,
                         Worker.COLUMN_SURNAME,
-                        Worker.COLUMN_DEPARTMENT,
+                        Worker.COLUMN_ID_DEPARTMENT,
                         Worker.COLUMN_DATEOFBIRTH,
                         Worker.COLUMN_DATEOFACCEPT,
                         Worker.COLUMN_TIMESTAMP},
@@ -87,19 +119,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (cursor != null)
             cursor.moveToFirst();
 
-        // prepare note object
+        Cursor cursor2 = db.query(Worker.TABLE_NAME_2,
+                new String[]{Worker.COLUMN_ID_DEPARTMENT, Worker.COLUMN_DEPARTMENT_NAME},
+                Worker.COLUMN_ID_DEPARTMENT + "=?",
+                new String[]{String.valueOf(cursor.getInt(cursor.getColumnIndex(Worker.COLUMN_ID_DEPARTMENT)))},
+                null, null, null, null);
+        cursor2.moveToFirst();
+        //int IdDepartment= cursor.getInt(cursor.getColumnIndex(Worker.COLUMN_ID_DEPARTMENT));
+
+        // prepare worker object
         Worker worker = new Worker(
                 cursor.getInt(cursor.getColumnIndex(Worker.COLUMN_ID)),
                 cursor.getInt(cursor.getColumnIndex(Worker.COLUMN_WORKERS_ID)),
                 cursor.getString(cursor.getColumnIndex(Worker.COLUMN_NAME)),
                 cursor.getString(cursor.getColumnIndex(Worker.COLUMN_SURNAME)),
-                cursor.getString(cursor.getColumnIndex(Worker.COLUMN_DEPARTMENT)),
+                cursor.getInt(cursor.getColumnIndex(Worker.COLUMN_ID_DEPARTMENT)),
                 cursor.getString(cursor.getColumnIndex(Worker.COLUMN_DATEOFBIRTH)),
                 cursor.getString(cursor.getColumnIndex(Worker.COLUMN_DATEOFACCEPT)),
-                cursor.getString(cursor.getColumnIndex(Worker.COLUMN_TIMESTAMP)));
+                cursor.getString(cursor.getColumnIndex(Worker.COLUMN_TIMESTAMP)),
+                cursor2.getString(cursor2.getColumnIndex(Worker.COLUMN_DEPARTMENT_NAME)));
 
         // close the db connection
         cursor.close();
+        cursor2.close();
 
         return worker;
     }
@@ -108,8 +150,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         List<Worker> workers = new ArrayList<>();
 
         // Select All Query
-        String selectQuery = "SELECT  * FROM " + Worker.TABLE_NAME + " ORDER BY " +
-                Worker.COLUMN_TIMESTAMP + " DESC";
+        String selectQuery = "SELECT * FROM " + Worker.TABLE_NAME  + " INNER JOIN " + Worker.TABLE_NAME_2 +
+              " USING (" + Worker.COLUMN_ID_DEPARTMENT + ") " + " ORDER BY " + Worker.COLUMN_WORKERS_ID + " DESC";
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -122,11 +164,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 worker.setWorkersId(cursor.getInt(cursor.getColumnIndex(Worker.COLUMN_WORKERS_ID)));
                 worker.setName(cursor.getString(cursor.getColumnIndex(Worker.COLUMN_NAME)));
                 worker.setSurname(cursor.getString(cursor.getColumnIndex(Worker.COLUMN_SURNAME)));
-                worker.setDepartment(cursor.getString(cursor.getColumnIndex(Worker.COLUMN_DEPARTMENT)));
+                worker.setId_department(cursor.getInt(cursor.getColumnIndex(Worker.COLUMN_ID_DEPARTMENT)));
                 worker.setDateOfBirth(cursor.getString(cursor.getColumnIndex(Worker.COLUMN_DATEOFBIRTH)));
                 worker.setDateOfAccept(cursor.getString(cursor.getColumnIndex(Worker.COLUMN_DATEOFACCEPT)));
                 worker.setTimestamp(cursor.getString(cursor.getColumnIndex(Worker.COLUMN_TIMESTAMP)));
-
+                worker.setDepartment_name(cursor.getString(cursor.getColumnIndex(Worker.COLUMN_DEPARTMENT_NAME)));
                 workers.add(worker);
             } while (cursor.moveToNext());
         }
@@ -155,12 +197,58 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
+        ContentValues values2 = new ContentValues();
         values.put(Worker.COLUMN_WORKERS_ID, worker.getWorkersId());
         values.put(Worker.COLUMN_NAME, worker.getName());
         values.put(Worker.COLUMN_SURNAME, worker.getSurname());
-        values.put(Worker.COLUMN_DEPARTMENT, worker.getDepartment());
+        //values.put(Worker.COLUMN_ID_DEPARTMENT, worker.getId_department());
         values.put(Worker.COLUMN_DATEOFBIRTH, worker.getDateOfBirth());
         values.put(Worker.COLUMN_DATEOFACCEPT, worker.getDateOfAccept());
+        values2.put(Worker.COLUMN_DEPARTMENT_NAME, worker.getDepartment_name());
+
+        // get list of all department's names and updating department table, if ???
+        List<String> departments = new ArrayList<>();
+        Cursor cursor_check = db.rawQuery("SELECT " + Worker.COLUMN_DEPARTMENT_NAME +
+                " FROM " + Worker.TABLE_NAME_2, null);
+        if (cursor_check.moveToFirst()) {
+            do {
+                departments.add(cursor_check.getString(cursor_check.getColumnIndex(Worker.COLUMN_DEPARTMENT_NAME)));
+            } while (cursor_check.moveToNext());
+        }
+
+        Cursor cursor_old_dep_name = db.rawQuery("SELECT " + Worker.COLUMN_DEPARTMENT_NAME +
+                " FROM " + Worker.TABLE_NAME_2 + " WHERE " + Worker.COLUMN_ID_DEPARTMENT + "=?",
+                new String[] {String.valueOf(worker.getId_department())});
+        cursor_old_dep_name.moveToFirst();
+        String oldDepartmentName = cursor_old_dep_name.getString(cursor_old_dep_name.getColumnIndex(Worker.COLUMN_DEPARTMENT_NAME));
+        String newDepartmentName = worker.getDepartment_name();
+
+        //
+        if(!newDepartmentName.equals(oldDepartmentName)) {
+            if (!departments.contains(newDepartmentName)) {
+                long id2 = db.insert(Worker.TABLE_NAME_2, null, values2);
+                Cursor cursor_new_id_dep = db.rawQuery(
+                        "SELECT " + Worker.COLUMN_ID_DEPARTMENT +
+                                " FROM " + Worker.TABLE_NAME_2
+                                + " WHERE " + Worker.COLUMN_DEPARTMENT_NAME + "=?",
+                        new String[] {newDepartmentName});
+                cursor_new_id_dep.moveToFirst();
+                int new_id_dep = cursor_new_id_dep.getInt(cursor_new_id_dep.getColumnIndex(Worker.COLUMN_ID_DEPARTMENT));
+                values.put(Worker.COLUMN_ID_DEPARTMENT, new_id_dep);
+
+            } if (departments.contains(newDepartmentName)) {
+                Cursor cursor_new_id_dep = db.rawQuery(
+                        "SELECT " + Worker.COLUMN_ID_DEPARTMENT +
+                                " FROM " + Worker.TABLE_NAME_2
+                                + " WHERE " + Worker.COLUMN_DEPARTMENT_NAME + "=?",
+                        new String[] {newDepartmentName});
+                cursor_new_id_dep.moveToFirst();
+                int new_id_dep = cursor_new_id_dep.getInt(cursor_new_id_dep.getColumnIndex(Worker.COLUMN_ID_DEPARTMENT));
+                values.put(Worker.COLUMN_ID_DEPARTMENT, new_id_dep);
+            }
+        } else {
+            values.put(Worker.COLUMN_ID_DEPARTMENT, worker.getId_department());
+        }
 
 
         // updating row
@@ -179,12 +267,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         List<Worker> workers = new ArrayList<>();
         String direction;
         if (flag>0) {
-            direction="ASC";} else {
-            direction="DESC";}
+            direction=" DESC";} else {
+            direction=" ASC";}
 
         // Select All Query
-        String selectQuery = "SELECT  * FROM " + Worker.TABLE_NAME + " ORDER BY " +
-                Worker.COLUMN_WORKERS_ID +" "+direction;
+
+        String selectQuery = "SELECT * FROM " + Worker.TABLE_NAME  + " INNER JOIN " + Worker.TABLE_NAME_2 +
+                " USING (" + Worker.COLUMN_ID_DEPARTMENT + ") " +" ORDER BY " + Worker.COLUMN_WORKERS_ID + direction;
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -197,11 +286,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 worker.setWorkersId(cursor.getInt(cursor.getColumnIndex(Worker.COLUMN_WORKERS_ID)));
                 worker.setName(cursor.getString(cursor.getColumnIndex(Worker.COLUMN_NAME)));
                 worker.setSurname(cursor.getString(cursor.getColumnIndex(Worker.COLUMN_SURNAME)));
-                worker.setDepartment(cursor.getString(cursor.getColumnIndex(Worker.COLUMN_DEPARTMENT)));
+                worker.setId_department(cursor.getInt(cursor.getColumnIndex(Worker.COLUMN_ID_DEPARTMENT)));
                 worker.setDateOfBirth(cursor.getString(cursor.getColumnIndex(Worker.COLUMN_DATEOFBIRTH)));
                 worker.setDateOfAccept(cursor.getString(cursor.getColumnIndex(Worker.COLUMN_DATEOFACCEPT)));
                 worker.setTimestamp(cursor.getString(cursor.getColumnIndex(Worker.COLUMN_TIMESTAMP)));
-
+                worker.setDepartment_name(cursor.getString(cursor.getColumnIndex(Worker.COLUMN_DEPARTMENT_NAME)));
                 workers.add(worker);
             } while (cursor.moveToNext());
         }
